@@ -2,7 +2,7 @@ import {Alert, Button, Col, Form, FormFeedback, FormGroup, Input, Label, Row, Sp
 import {useEffect, useState} from "react";
 import jwt_decode from "jwt-decode";
 import {useNavigate} from "react-router-dom";
-import useFetch from "./useFetch";
+import useFetch from "../../hooks/useFetch";
 
 export default function Login() {
     const navigate = useNavigate();
@@ -30,7 +30,7 @@ export default function Login() {
 
     const handlePasswordChange = (e) => {
         setPassword(e.target.value);
-        if (!e.target.value){
+        if (!e.target.value) {
             setPasswordValid("is-invalid")
             setButtonValid("disabled")
         } else {
@@ -100,7 +100,7 @@ export default function Login() {
                 </Row>
                 <Row className="text-center">
                     <Col>
-                        {!success && <Button className={buttonValid} onClick={e => handleSubmit(e)}>
+                        {!success && <Button type="submit" className={buttonValid} onClick={e => handleSubmit(e)}>
                             Submit
                         </Button>}
                         {success && <Button outline onClick={() => navigate(-1)}>Back</Button>}

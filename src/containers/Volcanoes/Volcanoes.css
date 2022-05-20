@@ -1,0 +1,19 @@
+.volcanoSearch {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.volcanoes {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.card-group {
+    flex: 1;
+}
+
+.card {
+    flex: 1;
+}

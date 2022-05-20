@@ -44,20 +44,27 @@ const useFetch = (method, url, body) => {
                 fetch(request)
                     .then(res => {
                         if (!res.ok) {
-                            setErrorCode(res.status);
+                            setErrorCode(res.status + " " + res.statusText);
                         }
                         return res.json();
                     })
                     .then(data => {
                         if (!data) {
-                            throw Error("No content found here");
+                            throw Error("");
                         }
                         if (data.error) {
-                            if (data.message){
+                            if (data.message) {
                                 setErrorCode("");
                                 throw Error(data.message);
                             }
-                            throw Error("No content found here");
+                            throw Error("");
+                        }
+                        if (data.status === "error") {
+                            if (data.message) {
+                                setErrorCode("");
+                                throw Error(data.message);
+                            }
+                            throw Error("");
                         }
                         setData(data);
                         setIsPending(false);
@@ -72,6 +79,10 @@ const useFetch = (method, url, body) => {
             }
         }, 0)
     }, [url, request])
+    if (errorCode | error) {
+        setData(null)
+    }
+    ;
     return {data, isPending, error, errorCode}
 }
 

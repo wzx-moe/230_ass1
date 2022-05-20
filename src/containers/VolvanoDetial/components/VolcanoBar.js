@@ -1,12 +1,4 @@
-import {
-    Chart as ChartJS,
-    CategoryScale,
-    LinearScale,
-    BarElement,
-    Title,
-    Tooltip,
-    Legend,
-} from 'chart.js';
+import {BarElement, CategoryScale, Chart as ChartJS, Legend, LinearScale, Title, Tooltip,} from 'chart.js';
 import {Bar} from 'react-chartjs-2';
 
 ChartJS.register(
@@ -47,7 +39,7 @@ export default function VolcanoBar(props) {
         ]
     };
     return (
-        <div className="pt-4" style={{width: '100%', height: '100%'}}>
+        <div className="Bar">
             <Bar options={options} data={data}/>
         </div>
     )

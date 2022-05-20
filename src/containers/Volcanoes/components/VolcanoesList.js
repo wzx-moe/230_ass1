@@ -41,9 +41,8 @@ export default function VolcanoesList(props) {
         gridRef.current.api.sizeColumnsToFit();
     }, []);
     return (
-
-        <div className="ag-theme-alpine justify-content-center pt-4" id="grid-wrapper"
-             style={{width: '100%', height: '100%'}}>
+        <div className="ag-grid ag-theme-alpine justify-content-center pt-3" id="grid-wrapper"
+             style={{width: '100%', height: 'available'}}>
             <AgGridReact
                 ref={gridRef}
                 rowData={countryLists}

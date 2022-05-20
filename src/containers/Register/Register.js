@@ -1,7 +1,7 @@
 import {Alert, Button, Col, Form, FormFeedback, FormGroup, Input, Label, Row, Spinner} from "reactstrap";
 import {useState} from "react";
 import {useNavigate} from "react-router-dom";
-import useFetch from "./useFetch";
+import useFetch from "../../hooks/useFetch";
 
 export default function Register() {
     const navigate = useNavigate();
@@ -90,7 +90,7 @@ export default function Register() {
                 </Row>
                 <Row className="text-center">
                     <Col>
-                        {!data && <Button className={buttonValid} onClick={e => handleSubmit(e)}>
+                        {!data && <Button type="submit" className={buttonValid} onClick={e => handleSubmit(e)}>
                             Submit
                         </Button>}
                         {data && <Button outline onClick={() => navigate("/login")}>Login</Button>}

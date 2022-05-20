@@ -1,13 +1,13 @@
-import {Routes, Route, useNavigate} from "react-router-dom";
+import {Route, Routes, useNavigate} from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
-import Home from "./Home";
-import Volcanoes from "./Volcanoes";
-import VolcanoNav from "./VolcanoNav";
-import VolcanoDetail from "./VolcanoDetail";
-import Login from "./Login";
-import Register from "./Register";
-import Logout from "./Logout";
+import Home from "./containers/Home/Home";
+import Volcanoes from "./containers/Volcanoes/Volcanoes";
+import VolcanoNav from "./components/Navbar/VolcanoNav";
+import VolcanoDetail from "./containers/VolvanoDetial/VolcanoDetail";
+import Login from "./containers/Login/Login";
+import Register from "./containers/Register/Register";
+import Logout from "./containers/Logout/Logout";
 
 function App() {
     const navigate = useNavigate();

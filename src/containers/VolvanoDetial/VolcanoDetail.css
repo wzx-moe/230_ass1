@@ -1,0 +1,44 @@
+.volcanoDetail {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.detail {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.volcanoList {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.card{
+    min-height: 40vh;
+}
+
+.card-body{
+    height: 100%;
+}
+
+.bar{
+    width: 100%;
+    min-height: 50vh;
+}
+
+.ag-grid {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.pending {
+    flex: 1;
+}
+
+.error {
+    flex: 1;
+}
